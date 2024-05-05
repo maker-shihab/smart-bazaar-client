@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useCart } from "../hooks/useCart";
 import { Product } from "../types/pagecontent";
 
 const ElectronicsProducts = () => {
+  const { addToCart } = useCart();
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -55,7 +57,18 @@ const ElectronicsProducts = () => {
                 <p className="text-sm text-gray-600 mt-1 line-clamp-2">
                   {product.description}
                 </p>
-                <button className="mt-4 bg-blue-950 text-white px-4 py-2 rounded hover:bg-blue-900 transition">
+                <button
+                  onClick={() =>
+                    addToCart({
+                      id: product.id.toString(),
+                      name: product.title,
+                      price: product.price,
+                      quantity: 1,
+                      image: product.thumbnail,
+                    })
+                  }
+                  className="mt-4 bg-blue-950 text-white px-4 py-2 rounded hover:bg-blue-900 transition"
+                >
                   Add to Cart
                 </button>
               </div>

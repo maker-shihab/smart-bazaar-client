@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
+import { useCart } from "../hooks/useCart";
 import PageBanner from "../section/banner/PageBanner";
 import { Product } from "../types/pagecontent";
 
 const Products = () => {
+  const { addToCart } = useCart();
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -19,11 +22,13 @@ const Products = () => {
     };
     fetchProducts();
   }, []);
+
   const pageContent = {
     title: "Welcome to Our Store",
     description:
       "Discover the latest in electronics with our curated selection of top-rated products From cutting-edge gadgets to essential accessories find everything you need to stay connected and entertained Explore our collection and elevate your tech game!",
   };
+
   return (
     <>
       <PageBanner pageContent={pageContent} />
@@ -57,7 +62,18 @@ const Products = () => {
                       {product.description}
                     </p>
                     <p className="text-white font-bold">${product.price}</p>
-                    <button className="bg-blue-950 text-white py-2 px-4 rounded mt-4 hover:bg-blue-700 transition">
+                    <button
+                      onClick={() =>
+                        addToCart({
+                          id: product.id.toString(),
+                          name: product.title,
+                          price: product.price,
+                          quantity: 1,
+                          image: product.thumbnail,
+                        })
+                      }
+                      className="bg-blue-950 text-white py-2 px-4 rounded mt-4 hover:bg-blue-700 transition"
+                    >
                       Add to Cart
                     </button>
                   </div>
