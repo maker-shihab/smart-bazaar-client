@@ -1,20 +1,16 @@
 import { Outlet } from "react-router";
-import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const Root = () => {
   return (
-    <div>
-      <header>
-        <nav>
-          <Link to="/">Home</Link> | <Link to="/about">About</Link>
-        </nav>
-      </header>
-      <main>
+    <>
+      <Header />
+      <main className="min-h-screen main_area">
         <Outlet />
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 
