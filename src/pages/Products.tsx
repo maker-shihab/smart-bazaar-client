@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
 import PageBanner from "../section/banner/PageBanner";
+import { Product } from "../types/pagecontent";
 
-interface Product {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  thumbnail: string;
-}
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
@@ -38,10 +32,9 @@ const Products = () => {
           <div className="text-center pb-6">
             <h2 className="text-white text-3xl font-bold pb-3">Products</h2>
             <p className="text-white/60 mb-6 max-w-2xl mx-auto">
-              Discover the latest in electronics with our curated selection of
-              top-rated products. From cutting-edge gadgets to essential
-              accessories, find everything you need to stay connected and
-              entertained. Explore our collection and elevate your tech game!
+              Explore top-rated electronics, from the latest gadgets to
+              must-have accessories — all in one place to elevate your tech
+              game.
             </p>
           </div>
           <div>

@@ -9,16 +9,16 @@ const TermsConditions = () => {
   return (
     <>
       <PageBanner pageContent={pageContent} />
-      <section className="policy_page bg-white">
+      <section className="policy_page bg-white py-16">
         <div className="container mx-auto text-blue-950">
-          <h2>1. General</h2>
-          <p>
+          <h3 className="font-bold text-2xl pb-3">1. General</h3>
+          <p className="pb-3">
             These Terms apply to all users of the website. Please read them
             carefully before using our services.
           </p>
 
-          <h2>2. Use of Our Website</h2>
-          <ul>
+          <h3 className="font-bold text-2xl py-3">2. Use of Our Website</h3>
+          <ul className="pb-3">
             <li>
               You must be at least 18 years old or have permission from a
               guardian.
@@ -26,31 +26,30 @@ const TermsConditions = () => {
             <li>You agree not to misuse the website or services.</li>
           </ul>
 
-          <h2>3. Products and Services</h2>
-          <p>
+          <h3 className="font-bold text-2xl py-3">3. Products and Services</h3>
+          <p className="pb-3">
             We strive to ensure all product descriptions and prices are
             accurate. However, we reserve the right to correct errors, including
             after an order has been placed.
           </p>
 
-          <h2>4. Orders and Payments</h2>
-          <p>
+          <h3 className="font-bold text-2xl py-3">4. Orders and Payments</h3>
+          <p className="pb-3">
             All orders are subject to availability and confirmation of the order
             price. We accept multiple payment methods for your convenience.
           </p>
 
-          <h2>5. Returns & Refunds</h2>
-          <p>
+          <h3 className="font-bold text-2xl py-3">5. Returns & Refunds</h3>
+          <p className="pb-3">
             Please refer to our <a href="/return-policy">Return Policy</a> for
             detailed information.
           </p>
 
-          <h2>6. Changes to the Terms</h2>
-          <p>
+          <h3 className="font-bold text-2xl py-3">6. Changes to the Terms</h3>
+          <p className="pb-3">
             Smart Bazaar reserves the right to change these terms at any time
             without prior notice.
           </p>
-
           <p>Last updated: May 2025</p>
         </div>
       </section>

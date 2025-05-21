@@ -1,12 +1,5 @@
 import { useEffect, useState } from "react";
-
-interface Product {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  thumbnail: string;
-}
+import { Product } from "../types/pagecontent";
 
 const ElectronicsProducts = () => {
   const [products, setProducts] = useState<Product[]>([]);

@@ -1,4 +1,6 @@
-const PageBanner = ({ pageContent }) => {
+import { PageContentProps } from "../../types/pagecontent";
+
+const PageBanner = ({ pageContent }: PageContentProps) => {
   return (
     <section className="page_banner">
       <div className="container mx-auto">
