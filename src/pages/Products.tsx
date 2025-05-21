@@ -25,13 +25,18 @@ const Products = () => {
     };
     fetchProducts();
   }, []);
+  const pageContent = {
+    title: "Welcome to Our Store",
+    description:
+      "Discover the latest in electronics with our curated selection of top-rated products From cutting-edge gadgets to essential accessories find everything you need to stay connected and entertained Explore our collection and elevate your tech game!",
+  };
   return (
     <>
-      <PageBanner />
+      <PageBanner pageContent={pageContent} />
       <div className="productPage py-20">
         <div className="container mx-auto">
-          <div className="text-center">
-            <h2 className="text-white text-3xl font-bold">Products</h2>
+          <div className="text-center pb-6">
+            <h2 className="text-white text-3xl font-bold pb-3">Products</h2>
             <p className="text-white/60 mb-6 max-w-2xl mx-auto">
               Discover the latest in electronics with our curated selection of
               top-rated products. From cutting-edge gadgets to essential
@@ -47,7 +52,7 @@ const Products = () => {
                 {products.map((product) => (
                   <div
                     key={product.id}
-                    className="p-4 rounded-2xl shadow hover:shadow-lg transition bg-blue-950/50 backdrop-blur-md"
+                    className="p-4 rounded-2xl shadow hover:shadow-lg transition bg-gray-900/20 backdrop-blur-2xl"
                   >
                     <img
                       src={product.thumbnail}
