@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router";
 
-import Blogs from "../pages/Blogs";
 import Home from "../pages/Home";
 import Products from "../pages/Products";
 import Root from "../pages/Root";
@@ -14,7 +13,6 @@ const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "products", Component: Products },
       { path: "voucher", Component: Voucher },
-      { path: "blogs", Component: Blogs },
     ],
   },
 ]);

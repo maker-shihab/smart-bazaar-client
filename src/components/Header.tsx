@@ -1,8 +1,26 @@
+import { useEffect, useState } from "react";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 const Header = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const headerClass = scrollY > 0 ? "bg-[#2f356d]" : "bg-transparent";
+
   return (
-    <header>
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${headerClass}`}
+    >
       <div className="container mx-auto">
         <div className="flex items-center justify-between gap-4 py-6">
           <div className="logo">
