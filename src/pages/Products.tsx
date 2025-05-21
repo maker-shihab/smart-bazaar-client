@@ -50,7 +50,7 @@ const Products = () => {
                 {products.map((product) => (
                   <div
                     key={product.id}
-                    className="p-4 rounded-2xl shadow hover:shadow-lg transition bg-gray-900/20 backdrop-blur-2xl"
+                    className="p-4 rounded-2xl shadow hover:shadow-lg transition bg-gray-600/10 backdrop-blur-2xl"
                   >
                     <img
                       src={product.thumbnail}
@@ -72,7 +72,7 @@ const Products = () => {
                           image: product.thumbnail,
                         })
                       }
-                      className="bg-blue-950 text-white py-2 px-4 rounded mt-4 hover:bg-blue-700 transition"
+                      className="hover:bg-blue-950 text-white py-2 px-4 rounded mt-4 bg-blue-700 transition"
                     >
                       Add to Cart
                     </button>

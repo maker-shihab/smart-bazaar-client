@@ -10,7 +10,9 @@ const ElectronicsProducts = () => {
   useEffect(() => {
     const fetchWatches = async () => {
       try {
-        const res = await fetch("https://dummyjson.com/products");
+        const res = await fetch(
+          "https://dummyjson.com/products/category/smartphones"
+        );
         const data = await res.json();
         setProducts(data.products);
       } catch (error) {

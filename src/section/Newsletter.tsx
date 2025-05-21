@@ -18,7 +18,7 @@ const Newsletter = () => {
             alt="dining"
             className="w-full h-full absolute z-0 sm:hidden"
           />
-          <div className="bg-blue-950/80 bg-opacity-80 md:my-16 lg:py-16 py-10 w-full md:mx-24 md:px-12 px-4 flex flex-col items-center justify-center relative z-40">
+          <div className="bg-blue-950/80 bg-opacity-80 md:my-16 lg:py-16 py-10 w-full md:mx-24 md:px-12 px-4 flex flex-col items-center justify-center relative z-10">
             <h1 className="text-3xl font-bold text-white text-center">
               Stay Updated with <br />
               Our Weekly Newsletter

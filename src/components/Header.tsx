@@ -29,7 +29,7 @@ const Header = () => {
     };
   }, []);
 
-  const headerClass = scrollY > 0 ? "bg-[#2f356d]" : "bg-transparent";
+  const headerClass = scrollY > 0 ? "bg-[#181c3d]" : "bg-transparent";
 
   return (
     <>

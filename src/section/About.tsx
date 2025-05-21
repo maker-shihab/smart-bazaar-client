@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import AboutThumb from "../assets/about-thumb.svg";
 const About = () => {
   return (
-    <section className="py-16 bg-[#2f356d]">
+    <section className="py-16 bg-[#181c3d]">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-4 text-center">
           About Smart Bazaar

@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router";
 
+import Checkout from "../pages/Checkout";
 import Home from "../pages/Home";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Products from "../pages/Products";
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "products", Component: Products },
       { path: "voucher", Component: Voucher },
+      { path: "checkout", Component: Checkout },
       { path: "policy", Component: PrivacyPolicy },
       { path: "terms", Component: TermsConditions },
     ],
